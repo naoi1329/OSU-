@@ -10,48 +10,44 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
-    @IBOutlet weak var tableView: UITableView! {
-        didSet {
-            
-        }
-    }
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.backgroundColor = .lightGray
+        self.title = "ホーム"
+        self.tableView.backgroundColor = .lightGray
+        
         tableView.delegate = self
         tableView.dataSource = self
         tableView.separatorStyle = .none
+        tableView.allowsSelection = false
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 88.0
         tableView.register(UINib(nibName: "LetterCell", bundle: nil), forCellReuseIdentifier: "LetterCell")
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        tableView.reloadData()
-    }
-    
 }
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //TODO: InfoViewに画面遷移
+        let cell = tableView.cellForRow(at: indexPath)
+        print(cell?.bounds)
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
     }
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //TODO: InfoView画面遷移
-    }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "LetterCell", for: indexPath)
-        print("view \(self.view.bounds)")
-        print("tableview\(tableView.bounds)")
-        print("cell \(cell.bounds)")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "LetterCell", for: indexPath) as! LetterCell
+        
+        if indexPath.row % 3 == 0 {
+            cell.messageLabel.text = "____"
+        } else if indexPath.row % 3 == 1 {
+             cell.messageLabel.text = "fslknflksnglkanglkjnawljkgnawklgnawlgnalwjkgnawklg"
+        }
+        
         return cell
     }
 }

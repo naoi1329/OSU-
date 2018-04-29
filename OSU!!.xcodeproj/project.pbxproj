@@ -24,9 +24,9 @@
 		0521B4242094558E0049F360 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0521B4232094558E0049F360 /* Search.storyboard */; };
 		0521B4262094559E0049F360 /* LetterPost.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0521B4252094559E0049F360 /* LetterPost.storyboard */; };
 		0521B4292094A7670049F360 /* PlaceHolderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0521B4282094A7670049F360 /* PlaceHolderTextView.swift */; };
+		055C83BA2095A45700A2CFAA /* LetterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055C83B82095A45700A2CFAA /* LetterCell.swift */; };
+		055C83BB2095A45700A2CFAA /* LetterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 055C83B92095A45700A2CFAA /* LetterCell.xib */; };
 		055F276A2094BE1000AABF37 /* DammyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055F27692094BE1000AABF37 /* DammyViewController.swift */; };
-		055F276E2094C2C000AABF37 /* LetterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055F276C2094C2C000AABF37 /* LetterCell.swift */; };
-		055F276F2094C2C000AABF37 /* LetterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 055F276D2094C2C000AABF37 /* LetterCell.xib */; };
 		055F277220954F1D00AABF37 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055F277120954F1D00AABF37 /* Client.swift */; };
 		055F277420955ABF00AABF37 /* Letter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055F277320955ABF00AABF37 /* Letter.swift */; };
 		055F2777209561A800AABF37 /* MessagePostResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055F2776209561A800AABF37 /* MessagePostResponse.swift */; };
@@ -74,9 +74,9 @@
 		0521B4232094558E0049F360 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		0521B4252094559E0049F360 /* LetterPost.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LetterPost.storyboard; sourceTree = "<group>"; };
 		0521B4282094A7670049F360 /* PlaceHolderTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceHolderTextView.swift; sourceTree = "<group>"; };
+		055C83B82095A45700A2CFAA /* LetterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterCell.swift; sourceTree = "<group>"; };
+		055C83B92095A45700A2CFAA /* LetterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LetterCell.xib; sourceTree = "<group>"; };
 		055F27692094BE1000AABF37 /* DammyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DammyViewController.swift; sourceTree = "<group>"; };
-		055F276C2094C2C000AABF37 /* LetterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterCell.swift; sourceTree = "<group>"; };
-		055F276D2094C2C000AABF37 /* LetterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LetterCell.xib; sourceTree = "<group>"; };
 		055F277120954F1D00AABF37 /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		055F277320955ABF00AABF37 /* Letter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Letter.swift; sourceTree = "<group>"; };
 		055F2776209561A800AABF37 /* MessagePostResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MessagePostResponse.swift; path = "OSU!!Tests/MessagePostResponse.swift"; sourceTree = SOURCE_ROOT; };
@@ -209,8 +209,8 @@
 		055F276B2094C29F00AABF37 /* TableCell */ = {
 			isa = PBXGroup;
 			children = (
-				055F276C2094C2C000AABF37 /* LetterCell.swift */,
-				055F276D2094C2C000AABF37 /* LetterCell.xib */,
+				055C83B82095A45700A2CFAA /* LetterCell.swift */,
+				055C83B92095A45700A2CFAA /* LetterCell.xib */,
 			);
 			path = TableCell;
 			sourceTree = "<group>";
@@ -340,8 +340,8 @@
 				0521B3DF209452980049F360 /* LaunchScreen.storyboard in Resources */,
 				0521B3DC209452980049F360 /* Assets.xcassets in Resources */,
 				0521B3DA209452970049F360 /* Main.storyboard in Resources */,
+				055C83BB2095A45700A2CFAA /* LetterCell.xib in Resources */,
 				0521B422209455870049F360 /* Home.storyboard in Resources */,
-				055F276F2094C2C000AABF37 /* LetterCell.xib in Resources */,
 				0521B4242094558E0049F360 /* Search.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -367,7 +367,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				055F276E2094C2C000AABF37 /* LetterCell.swift in Sources */,
 				0521B40E209454060049F360 /* HomeViewController.swift in Sources */,
 				055F277220954F1D00AABF37 /* Client.swift in Sources */,
 				0521B4122094542A0049F360 /* SearchViewController.swift in Sources */,
@@ -378,6 +377,7 @@
 				055F277420955ABF00AABF37 /* Letter.swift in Sources */,
 				0521B4102094541C0049F360 /* SearchNavigationController.swift in Sources */,
 				0521B3D5209452970049F360 /* AppDelegate.swift in Sources */,
+				055C83BA2095A45700A2CFAA /* LetterCell.swift in Sources */,
 				0521B40C209453FD0049F360 /* HomeNavigationController.swift in Sources */,
 				055F276A2094BE1000AABF37 /* DammyViewController.swift in Sources */,
 				0521B40A209453ED0049F360 /* HomeTabBarController.swift in Sources */,

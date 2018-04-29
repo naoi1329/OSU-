@@ -6,4 +6,12 @@
 //  Copyright © 2018年 直井翔汰. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class LetterInfoViewController: UIViewController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+}
